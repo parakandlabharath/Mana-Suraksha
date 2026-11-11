@@ -13,7 +13,7 @@ class SmsAnalyzerTest {
     @Test
     void flagsExplicitOtpDisclosureRequest() {
         var result = analyzer.analyze("Please share your OTP immediately.");
-        assertEquals(RiskLevel.SUSPICIOUS, result.riskLevel());
+        assertEquals(RiskLevel.HIGH, result.riskLevel());
         assertTrue(result.findings().stream()
                 .anyMatch(f -> f.ruleCode().equals("OTP_DISCLOSURE_REQUEST")));
     }
