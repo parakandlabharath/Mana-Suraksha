@@ -4,4 +4,5 @@
   <groupId>org.manasuraksha</groupId><artifactId>mana-suraksha</artifactId><version>0.1.0-SNAPSHOT</version><packaging>pom</packaging>
   <modules><module>core-java</module><module>backend</module></modules>
   <properties><maven.compiler.release>17</maven.compiler.release><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding></properties>
+  <build><pluginManagement><plugins><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.13.0</version><configuration><release>17</release></configuration></plugin></plugins></pluginManagement></build>
 </project>
