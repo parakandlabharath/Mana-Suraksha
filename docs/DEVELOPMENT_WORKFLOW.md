@@ -15,7 +15,8 @@ Requirements: JDK 17+, Maven 3.8+, Git.
 From repository root:
 ```bash
 mvn test
-mvn -pl backend -am spring-boot:run
+mvn -pl backend -am install
+mvn -pl backend spring-boot:run
 ```
 API: http://localhost:8080. Health: GET /api/v1/health.
 
