@@ -1,14 +1,18 @@
-name: Core Java CI
+name: Maven CI
 
 on:
   push:
     paths:
+      - 'pom.xml'
       - 'core-java/**'
-      - '.github/workflows/core-java.yml'
+      - 'backend/**'
+      - '.github/workflows/**'
   pull_request:
     paths:
+      - 'pom.xml'
       - 'core-java/**'
-      - '.github/workflows/core-java.yml'
+      - 'backend/**'
+      - '.github/workflows/**'
 
 jobs:
   test:
@@ -22,6 +26,5 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: maven
-      - name: Run Core Java tests
+      - name: Build all modules and run tests
         run: mvn -B test
-        working-directory: core-java
