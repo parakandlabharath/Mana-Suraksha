@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
+@org.springframework.web.bind.annotation.CrossOrigin(origins = "http://localhost:5500")
 @RequestMapping("/api/v1/analysis")
 public class AnalysisController {
     private final ThreatAnalyzer<String> smsAnalyzer = new SmsAnalyzer();
