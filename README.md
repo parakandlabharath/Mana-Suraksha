@@ -55,7 +55,8 @@ From the repository root:
 
 ```bash
 mvn test
-mvn -pl backend -am spring-boot:run
+mvn -pl backend -am install
+mvn -pl backend spring-boot:run
 ```
 
 The API runs at `http://localhost:8080`. Health endpoint: `GET /api/v1/health`.
