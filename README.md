@@ -59,7 +59,7 @@ mvn -pl backend -am install
 mvn -pl backend spring-boot:run
 ```
 
-The API runs at `http://localhost:8080`. Health endpoint: `GET /api/v1/health`.
+The API runs at `http://localhost:8080`. Health endpoint: `GET /api/v1/health`. The browser client is served separately; confirm the backend CORS configuration before connecting it to the API.
 
 In another terminal:
 
@@ -68,7 +68,7 @@ cd web-app
 python -m http.server 5500
 ```
 
-Open `http://localhost:5500`. Local development CORS allows this origin for the analysis controller.
+Open `http://localhost:5500`. If the browser blocks API requests, configure a narrowly scoped development CORS origin in the backend; do not enable wildcard CORS in production.
 
 ### API examples
 

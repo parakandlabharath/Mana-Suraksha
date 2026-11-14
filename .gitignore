@@ -1,11 +1,16 @@
-# Java / Maven
+# Java and Maven
 target/
 *.class
 *.jar
 *.war
 *.ear
 
-# IDE
+# Node / web tooling
+node_modules/
+dist/
+build/
+
+# IDE files
 .idea/
 .vscode/
 *.iml
@@ -15,13 +20,12 @@ target/
 
 # Android / Gradle
 .gradle/
-build/
 local.properties
 captures/
 .externalNativeBuild/
 .cxx/
 
-# Environment and secrets
+# Local secrets and environment files
 .env
 .env.*
 !.env.example
@@ -29,9 +33,7 @@ captures/
 *.key
 secrets/
 
-# OS, logs and temporary files
+# Logs and operating-system files
+*.log
 .DS_Store
 Thumbs.db
-*.log
-tmp/
-temp/
